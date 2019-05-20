@@ -19,7 +19,9 @@ class DataProvider extends Component {
             this.setState({
                 joke: res.data.attachments[0].fallback
             })
-        })
+        }).catch(function (error) { 
+            window.location.reload() 
+        });
     }
 
     render() {
